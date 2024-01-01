@@ -12,6 +12,7 @@ phases:
   post_build:
     commands:
       - docker push 474011752432.dkr.ecr.us-east-1.amazonaws.com/music:latest
-      - printf '[{"name":"hello-world","imageUri":"%s"}]' 474011752432.dkr.ecr.us-east-1.amazonaws.com/music:latest imagedefinitions.json
+      - printf '[{"name":"sa1","imageUri":"%s"}]' 474011752432.dkr.ecr.us-east-1.amazonaws.com/music:latest imagedefinitions.json
+      - cat imagedefinitions.json
 artifacts:
     files: imagedefinitions.json
