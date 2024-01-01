@@ -13,5 +13,5 @@ phases:
     commands:
       - docker push 474011752432.dkr.ecr.us-east-1.amazonaws.com/music:latest
    
-  artifacts:
-      files: imagedefinitions.json
+artifacts:
+    files: imagedefinitions.json
