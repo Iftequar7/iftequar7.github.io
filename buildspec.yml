@@ -5,6 +5,7 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
+      - docker login -u="iftequar7" -p="Suselinux@786"
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 474011752432.dkr.ecr.us-east-1.amazonaws.com
       - REPOSITORY_URI=474011752432.dkr.ecr.us-east-1.amazonaws.com/music:latest
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-50)
